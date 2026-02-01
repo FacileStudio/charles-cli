@@ -1,0 +1,4 @@
+- changer titre de la société "#provider_name – Développeur Freelance"
+- utiliser https://github.com/Myriad-Dreamin/typst.ts à la place du cli typst
+- faire la version web
+- rajouter le template de contrat maître
