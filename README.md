@@ -22,6 +22,11 @@ This project provides an interactive script to generate various Typst documents 
 
 3.  **Generated Files**: The generated `.typ` files and their compiled `.pdf` versions will be created in the root directory of this project, named like `generated-devis-prestation-<client_name>.typ` and `generated-devis-prestation-<client_name>.pdf`.
 
+## Demo
+
+![demo](demo.gif)
+
+
 ## Document Templates
 
 The templates are located in the `templates/` directory:
@@ -31,6 +36,20 @@ The templates are located in the `templates/` directory:
 *   `devis-prestation.typ`: Template for general service quotes.
 
 These templates contain placeholders (e.g., `{{client_name}}`, `{{items}}`) that are dynamically replaced by the script.
+
+## Job Configuration (`job.yml`)
+
+The `job.yml` file serves as a central configuration for defining all the dynamic data used in document generation. It allows you to pre-fill details for service providers, clients, service prestations, maintenance contracts, and general contract information.
+
+### Structure of `job.yml`
+
+*   **`prestataire`**: Contains details about the service provider (e.g., name, address, bank details).
+*   **`client`**: Contains details about the client (e.g., name, address).
+*   **`prestation`**: Details about specific services provided, including a number, date, due date, and a list of service items with descriptions, quantities, units, and prices.
+*   **`maintenance`**: Information related to maintenance contracts, such as number, date, period, estimated railway, and maintenance items.
+*   **`contrat`**: General contract information like reference, date, and desired output file name.
+
+By modifying this file, you can quickly generate documents with consistent and pre-defined information without needing to interactively input all details each time.
 
 ## Customization
 
