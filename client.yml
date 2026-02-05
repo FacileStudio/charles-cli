@@ -1,5 +1,0 @@
-name: "Acme Corp"
-address: "42 Rue du Futur"
-city: "75008 Paris"
-country: "France"
-siret: "98765432100012" # Optionnel, peut être laissé vide

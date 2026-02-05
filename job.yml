@@ -1,0 +1,50 @@
+prestataire:
+  name: "Jean Codeur EURL"
+  legal_form: "EURL au capital de 1000€"
+  address: "42 Rue de l'Innovation"
+  city: "75001 Paris"
+  country: "France"
+  siret: "123 456 789 00012"
+  email: "contact@jeancodeur.fr"
+  phone: "06 01 02 03 04"
+  bank_name: "Banque Digitale"
+  iban: "FR76 1234 5678 9012 3456 7890 123"
+  bic: "BDIGFRXX"
+  tva_rate: 20
+
+client:
+  name: "SpaceX Exploration Technologies"
+  address: "Rocket Road"
+  city: "Hawthorne, CA 90250"
+  country: "USA"
+  siret: "Non applicable (USA)"
+
+prestation:
+  number: "DEV-2026-001"
+  date: "05/02/2026"
+  due: "05/03/2026"
+  items:
+    - description: "Développement Module IA"
+      quantity: 5
+      unit: "jours"
+      price: 650
+    - description: "Architecture Cloud"
+      quantity: 2
+      unit: "jours"
+      price: 800
+
+maintenance:
+  number: "MAINT-2026-001"
+  date: "10/02/2026"
+  maintenance_period: "Février 2026"
+  railway_estimate: "150.00"
+  items:
+    - description: "Maintenance préventive serveurs"
+      quantity: 1
+      unit: "forfait"
+      price: 450
+
+contrat:
+  ref: "CONT-2026-SPX-01"
+  date: "15/02/2026"
+  output_name: "Contrat_Maintenance_SpaceX_2026"
