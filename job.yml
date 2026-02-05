@@ -17,10 +17,10 @@ client:
   address: "Rocket Road"
   city: "Hawthorne, CA 90250"
   country: "USA"
-  siret: "Non applicable (USA)"
+  siret: "0"
 
 prestation:
-  number: "DEV-2026-001"
+  number: "FACT-2026-001"
   date: "05/02/2026"
   due: "05/03/2026"
   items:
@@ -34,17 +34,24 @@ prestation:
       price: 800
 
 maintenance:
-  number: "MAINT-2026-001"
+  number: "DEVIS-MAINT-2026-001"
   date: "10/02/2026"
+  validity_date: "10/03/2026"
   maintenance_period: "Février 2026"
-  railway_estimate: "150.00"
+  railway_estimate: 150.00
   items:
-    - description: "Maintenance préventive serveurs"
+    - description: "Forfait Maintenance Mensuel"
       quantity: 1
-      unit: "forfait"
+      unit: "mois"
       price: 450
 
-contrat:
-  ref: "CONT-2026-SPX-01"
+contrat_prestation:
+  number: "CONT-PRESTA-SPX-01"
+  date: "05/02/2026"
+  quote_number: "FACT-2026-001"
+  output_name: "Contrat_Projet_SpaceX"
+
+contrat_maintenance:
+  number: "CONT-MAINT-SPX-01"
   date: "15/02/2026"
-  output_name: "Contrat_Maintenance_SpaceX_2026"
+  output_name: "Contrat_Maintenance_SpaceX"
