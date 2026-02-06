@@ -1,6 +1,6 @@
 Output demo.gif
 
-Set FontSize 24
+Set FontSize 20
 Set Width 1200
 Set Height 600
 
