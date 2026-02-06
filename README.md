@@ -43,14 +43,64 @@ The `job.yml` file serves as a central configuration for defining all the dynami
 
 ### Structure of `job.yml`
 
-*   **`prestataire`**: Contains details about the service provider (e.g., name, address, bank details).
-*   **`client`**: Contains details about the client (e.g., name, address).
-*   **`prestation`**: Details about specific services provided, including a number, date, due date, and a list of service items with descriptions, quantities, units, and prices.
-*   **`maintenance`**: Information related to maintenance contracts, such as number, date, period, estimated railway, and maintenance items.
-*   **`contrat`**: General contract information like reference, date, and desired output file name.
+```yml
+prestataire:
+  name: "Jean Codeur EURL"
+  legal_form: "EURL au capital de 1000€"
+  address: "42 Rue de l'Innovation"
+  city: "75001 Paris"
+  country: "France"
+  siret: "123 456 789 00012"
+  email: "contact@jeancodeur.fr"
+  phone: "06 01 02 03 04"
+  bank_name: "Banque Digitale"
+  iban: "FR76 1234 5678 9012 3456 7890 123"
+  bic: "BDIGFRXX"
+  tva_rate: 20
+
+client:
+  name: "SpaceX Exploration Technologies"
+  address: "Rocket Road"
+  city: "Hawthorne, CA 90250"
+  country: "USA"
+  siret: "0"
+
+prestation:
+  number: "FACT-2026-001"
+  date: "05/02/2026"
+  due: "05/03/2026"
+  items:
+    - description: "Développement Module IA"
+      quantity: 5
+      unit: "jours"
+      price: 650
+    - description: "Architecture Cloud"
+      quantity: 2
+      unit: "jours"
+      price: 800
+
+maintenance:
+  number: "DEVIS-MAINT-2026-001"
+  date: "10/02/2026"
+  validity_date: "10/03/2026"
+  maintenance_period: "Février 2026"
+  railway_estimate: 150.00
+  items:
+    - description: "Forfait Maintenance Mensuel"
+      quantity: 1
+      unit: "mois"
+      price: 450
+
+contrat_prestation:
+  number: "CONT-PRESTA-SPX-01"
+  date: "05/02/2026"
+  quote_number: "FACT-2026-001"
+  output_name: "Contrat_Projet_SpaceX"
+
+contrat_maintenance:
+  number: "CONT-MAINT-SPX-01"
+  date: "15/02/2026"
+  output_name: "Contrat_Maintenance_SpaceX"
+  ```
 
 By modifying this file, you can quickly generate documents with consistent and pre-defined information without needing to interactively input all details each time.
-
-## Customization
-
-You can modify the `.typ` templates in the `templates/` directory to change the layout or content of the generated documents. Ensure that you maintain the placeholder format (`{{placeholder_name}}`) for the script to function correctly.
