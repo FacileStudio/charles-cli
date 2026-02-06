@@ -27,16 +27,6 @@ This project provides an interactive script to generate various Typst documents 
 ![demo](demo.gif)
 
 
-## Document Templates
-
-The templates are located in the `templates/` directory:
-
-*   `contrat-maintenance.typ`: Template for maintenance contracts.
-*   `devis-maintenance.typ`: Template for maintenance quotes.
-*   `devis-prestation.typ`: Template for general service quotes.
-
-These templates contain placeholders (e.g., `{{client_name}}`, `{{items}}`) that are dynamically replaced by the script.
-
 ## Job Configuration (`job.yml`)
 
 The `job.yml` file serves as a central configuration for defining all the dynamic data used in document generation. It allows you to pre-fill details for service providers, clients, service prestations, maintenance contracts, and general contract information.
