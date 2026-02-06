@@ -25,7 +25,6 @@ export function mapVariables(type: string, config: any, docData: any) {
     due_date: docData.due || docData.validity_date || config.due || "",
   };
 
-  // Ajout des préfixes provider_ et client_
   Object.entries(prestataire).forEach(([k, v]) => r[`provider_${k}`] = v);
   Object.entries(client).forEach(([k, v]) => r[`client_${k}`] = v);
 

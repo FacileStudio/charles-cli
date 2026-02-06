@@ -24,7 +24,7 @@ async function main() {
   const config = await loadYaml(configPath);
   if (!config) process.exit(1);
 
-  intro(`🚀 CHARLES CLI - ${basename(configPath)}`);
+  intro(`🦉 Charles - ${basename(configPath)}`);
 
   for (const type of (Object.keys(DOC_CONFIG) as DocType[])) {
     if (!config[type]) continue; // On ne traite que ce qui est coché dans le YAML
@@ -34,18 +34,14 @@ async function main() {
 
     const docData = typeof config[type] === 'object' ? config[type] : {};
     
-    // 1. Préparation des données
     const variables = mapVariables(type, config, docData);
     
-    // 2. Injection dans le template
     const finalContent = injectVariables(content, variables);
 
-    // 3. Génération du nom de fichier
     const clientName = (config.client?.name || "Client").replace(/[^a-z0-9]/gi, "_");
     const outName = docData.output_name || `${DOC_CONFIG[type].prefix}_${clientName}`;
     const finalPath = values.out ? join(values.out, `${outName}.typ`) : `${outName}.typ`;
 
-    // 4. Écriture et Compilation
     const dir = dirname(finalPath);
     if (dir !== "." && !existsSync(dir)) mkdirSync(dir, { recursive: true });
 
@@ -53,7 +49,7 @@ async function main() {
     compileTypst(finalPath);
   }
 
-  outro("Tous les documents ont été générés. ✨");
+  outro("🎉 Tous les documents ont été générés.");
 }
 
 main().catch(console.error);

@@ -7,7 +7,6 @@ export async function loadYaml(file: string) {
   if (!existsSync(file)) return null;
   try {
     const content = await Bun.file(file).text();
-    // @ts-ignore
     return Bun.YAML.parse(content);
   } catch (e) { return null; }
 }
